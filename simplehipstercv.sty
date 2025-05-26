@@ -175,19 +175,26 @@
 {\color{#3}\rule[\baselineskip]{#1\textwidth}{#2}}\vspace{0.5em}
 }
 
-\newcommand{\cvevent}[7]{%
+\newcommand{\cvevent}[6]{%
   {#1} &
   \textbf{#2}\newline
-  \textsc{\href{#3}{#4}} $\cdot$ {#5 ~\faMapMarker}\newline
-  {\color{black!70}\footnotesize #6}\vspace{1.5em} &
-  \raisebox{-0.7\height}{\href{#3}{\includegraphics[height=1cm]{#7}}}%
+  \textsc{\href{#3}{#4 {\phantom{i}\footnotesize\color{headerblue} ~\faBriefcase}}}%
+  \ifthenelse{\equal{#5}{}}{}% jeżeli #5 == ""
+    { $\cdot$ {#5 {\phantom{i}\footnotesize\color{cvred} ~\faMapMarker}}}% w przeciwnym razie dodajemy kropkę + #5 + ikona
+  \newline
+  {\color{black!70}\footnotesize #6}\vspace{1.5em}
 }
+
 \newcommand{\cvdegree}[7]{%
   {#1} &
   \textbf{#2}\newline
-  \textsc{#3} $\cdot$ \href{#6}{#4 {\phantom{i}\footnotesize ~\faUniversity}}\newline
-  {\color{black!70}\scriptsize #5}\vspace{0.5em} &
-  \raisebox{-0.7\height}{\ifx&#7&\else\href{#6}{\includegraphics[height=1cm]{#7}}\fi}%
+  \parbox[t]{\linewidth}{\textsc{#3} $\cdot$ 
+    \href{#6}{#4 {\phantom{i}\footnotesize\color{headerblue} ~\faUniversity}}%
+    \ifthenelse{\equal{#5}{}}% jeżeli #5 == ""
+      {}% nic
+      { $\cdot$ {#5 {\phantom{i}\footnotesize\color{cvred} ~\faMapMarker}}}% w przeciwnym razie kropka+#5+ikona
+  }\newline
+  {\color{black!70}\scriptsize \parbox[t]{\linewidth}{#7}}\vspace{0.5em}%
 }
 
 

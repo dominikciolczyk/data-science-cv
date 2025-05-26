@@ -8,7 +8,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[default]{raleway}
 \usepackage[margin=1cm, a4paper]{geometry}
-
+\usepackage{tabularx}
 
 %------------------------------------------------------------------ Variablen
 
@@ -95,42 +95,42 @@ Astronomy ~•~ History ~•~ Ballroom dance ~•~ Philosophy
 \switchcolumn
 
 \small
-
 \section*{Education}
-\begin{tabular}{r| p{0.45\textwidth} c}
+\begin{tabularx}{\linewidth}{r|X}
   \cvdegree
     {02/2024--Current}
     {Master of Engineering}
     {Informatics – Data Science}
-    {AGH University of Cracow \color{headerblue}}
-    {Thesis: Short- and long-term prediction of cloud resource consumption using deep learning.}
-    {https://agh.edu.pl/en}
-    {AGH.jpg} \\
+    {AGH University of Krakow}
+    {}
+    {https://www.agh.edu.pl/en/}
+    {Thesis: Short- and long-term prediction of cloud resource consumption using deep learning.} \\
 
   \cvdegree
     {10/2020--01/2024}
     {Engineer}
     {Informatics}
-    {Silesian University of Technology \color{headerblue}}
-    {Thesis: An application supporting the analysis of the corneal endothelium. Final grade: 5, awarded the Rector's Scholarship for academic excellence.}
+    {Silesian University of Technology}
+    {}
     {https://polsl.pl/en}
-    {POLSL.png} \\
+    {Thesis: An application supporting the analysis of the corneal endothelium.\\Final grade: 5, awarded the Rector's Scholarship for academic excellence.} \\
 
   \cvdegree
     {09/2016--06/2020}
     {Technician}
     {Informatics}
-    {Technikum nr 2 w Zespole Szkół Techniczno-Usługowych w Trzebini \color{headerblue}}
-    {}
+    {Technikum w Zespole Szkół\\ Techniczno-Usługowych}
+    {Trzebinia}
     {https://zstu.edu.pl}
-    {ZSTU.png}
-\end{tabular}
+    {}
+\end{tabularx}
+
 
 \section*{Work Experience}
 \begin{tabular}{r| p{0.45\textwidth} c}
-    \cvevent{07/2024-05/2025}{Software Quality Engineer}{https://www.sabre.com/locations/poland/}{Sabre Poland}{Cracow \color{cvred}}{Design and maintain automated acceptance tests in a large monorepo, analyze regression results.}{sabre.png} \\
-    \cvevent{09/2022}{Full-stack Developer}{https://prointegra.com.pl}{Prointegra}{Katowice \color{cvred}}{Focused on debugging and writing unit tests within an existing web development project.}{prointegra.jpg} \\
-    \cvevent{10/2020}{IT Technican}{https://tauron-wytwarzanie.pl/en?sc_lang=en}{TAURON Wytwarzanie S.A}{Trzebinia \color{cvred}}{Provided technical support and assisted in programming industrial controllers.}{tauron_w.png} \\
+    \cvevent{07/2024-05/2025}{Software Quality Engineer}{https://www.sabre.com/locations/poland/}{Sabre Poland}{Cracow}{Design and maintain automated acceptance tests in a large monorepo, analyze regression results.} \\
+    \cvevent{09/2022}{Full-stack Developer}{https://prointegra.com.pl}{Prointegra}{Katowice}{Focused on debugging and writing unit tests within an existing web development project.} \\
+    \cvevent{10/2020}{IT Technican}{https://tauron-wytwarzanie.pl/en?sc_lang=en}{TAURON Wytwarzanie S.A}{Trzebinia}{Provided technical support and assisted in programming industrial controllers.} \\
 \end{tabular}
 \bigskip
 
