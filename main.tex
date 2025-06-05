@@ -27,16 +27,27 @@
 
 \simpleheader{headercolour}{}{Dominik Ciołczyk}{Data Science Student}{white}
 
+% 2) Dodajemy dokładnie 3.5 cm odstępu, aby wypchnąć kolejną zawartość (ikony) poniżej nagłówka.
+\vspace*{1.5cm}
 
+% 3) Umieszczamy ikony/blok kontaktowy
+\begin{center}\small
+  \icon{\faPhone}{white}{}    \textcolor{white}{\href{tel:+48575178743}{+48 575 178 743}} \quad
+  \icon{\faAt}{white}{}       \textcolor{white}{\href{mailto:dominik.ciolczyk@outlook.com}{\texttt{dominik.ciolczyk@outlook.com}}} \quad
+  \icon{\faLinkedin}{white}{}  \textcolor{white}{\href{https://www.linkedin.com/in/dominik-ciolczyk/}{Dominik Ciołczyk}} \quad
+  \icon{\faGithub}{white}{}    \textcolor{white}{\href{https://github.com/dominikciolczyk}{dominikciolczyk}}
+\end{center}
+
+% 4) Jeśli nadal widzisz drobną przerwę przed paracol, odejmij ją negatywnym vspace:
+\vspace*{-3.5em} % <– dostosuj – usuwa ewentualne 0.5 em „luftu” po center
 
 %------------------------------------------------
 
 % this has to be here so the paracols starts..
 \subsection*{}
-\vspace{4em}
 
 \setlength{\columnsep}{2em}
-\columnratio{0.25}[0.75]
+\columnratio{0.2}[0.8]
 \begin{paracol}{2}
 \hbadness5000
 %\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
@@ -64,7 +75,7 @@ Time Series Forecasting • ML Pipeline Orchestration • Image Processing • M
 
 \bg{cvgreen}{white}{Languages}\\[0.5em]
 \begin{tabular}{l | ll}
-\textbf{Polish} & C2 \\
+\textbf{Polish} & native \\
 \textbf{English} & C1 \\
 \end{tabular}
 \bigskip
@@ -91,8 +102,8 @@ Science fiction ~•~ Strategic games ~•~ Geopolitics ~•~ Astrophysics ~•~
   \cvdegree
     {02/2024--Current}
     {Master of Engineering}
-    {Informatics – Data Science}
-    {AGH University of Krakow}
+    {Computer Science – Data Science}
+    {\textbf{AGH University of Krakow}, Faculty of Computer Science}
     {}
     {https://www.agh.edu.pl/en/}
     {Thesis: Short- and long-term prediction of cloud resource consumption using deep learning.} \\
@@ -100,8 +111,9 @@ Science fiction ~•~ Strategic games ~•~ Geopolitics ~•~ Astrophysics ~•~
   \cvdegree
     {10/2020--01/2024}
     {Engineer}
-    {Informatics}
-    {Silesian University of Technology}
+    {Computer Science}
+    {\textbf{Silesian University of Technology}, Faculty of Automatic Control, Electronics
+and Computer Science}
     {}
     {https://polsl.pl/en}
     {Thesis: An application supporting the analysis of the corneal endothelium.\\Final grade: 5, awarded the Rector's Scholarship for academic excellence.} \\
@@ -109,8 +121,8 @@ Science fiction ~•~ Strategic games ~•~ Geopolitics ~•~ Astrophysics ~•~
   \cvdegree
     {09/2016--06/2020}
     {Technician}
-    {Informatics}
-    {Technikum w Zespole Szkół\\ Techniczno-Usługowych}
+    {Computer Science}
+    {\textbf{Technikum w Zespole Szkół\\ Techniczno-Usługowych}}
     {Trzebinia}
     {https://zstu.edu.pl}
     {}
@@ -118,43 +130,65 @@ Science fiction ~•~ Strategic games ~•~ Geopolitics ~•~ Astrophysics ~•~
 
 \section*{Work Experience}
 \begin{tabularx}{\linewidth}{r|X}
-    \cvevent{07/2024-05/2025}{Software Quality Engineer}{https://www.sabre.com/locations/poland/}{Sabre Poland}{Cracow}{Designed and maintained automated acceptance tests in a large-scale monorepo; analyzed regression results to identify issues and verify new features.} \\
-    \cvevent{09/2022}{Full-stack Developer}{https://prointegra.com.pl}{Prointegra}{Katowice}{Identified and resolved software bugs; wrote unit tests to ensure reliability of a web application.} \\
-    \cvevent{10/2020}{IT Technican}{https://tauron-wytwarzanie.pl/en?sc_lang=en}{TAURON Wytwarzanie S.A.}{Trzebinia}{Programmed industrial controllers used in power plant automation systems. Additionally, provided remote IT support and troubleshooting for internal users within the infrastructure department.} \\
+  \cvevent
+    {07/2024--05/2025}%
+    {Software Quality Engineer}%
+    {https://www.sabre.com/locations/poland/}%
+    {Sabre Poland}%
+    {Cracow}%
+    {Designed and maintained automated acceptance tests in a large-scale monorepo; analyzed regression results to identify issues and verify new features.}%
+    {Java, Cucumber, Selenium WebDriver, TestNG, Git, Jenkins, Docker}%
+  \\
+
+  \cvevent
+    {09/2022}%
+    {Full-stack Developer}%
+    {https://prointegra.com.pl}%
+    {Prointegra}%
+    {Katowice}%
+    {Identified and resolved software bugs; wrote unit tests to ensure reliability of a web application.}%
+    {C\#, ASP.NET Core, Angular, TypeScript, Entity Framework, SQL Server, Azure DevOps}%
+  \\
+
+  \cvevent
+    {10/2020}%
+    {IT Technician}%
+    {https://tauron-wytwarzanie.pl/en?sc_lang=en}%
+    {TAURON Wytwarzanie S.A.}%
+    {Trzebinia}%
+    {Programmed industrial controllers used in power plant automation systems; provided remote IT support and troubleshooting for internal users.}%
+    {Siemens Step 7, TIA Portal, SCADA (WinCC), Windows Server, Active Directory, Bash}%
+  \\
 \end{tabularx}
 \bigskip
 
 \begin{minipage}[t]{0.37\textwidth}
-\section*{Projects}
-\begin{tabularx}{\linewidth}{rX}
-    01/2024 & \emph{\href{https://github.com/dominikciolczyk/corneal-endothelium-analEYEzer}{corneal-endothelium-analEYEzer}} - a microservice-based system using Next.js, DRF, Celery, and RabbitMQ, integrated with MinIO for image storage and a SQL database for metadata. The system allows users to upload corneal endothelium images and supports asynchronous processing and analysis of medical parameters. \\
-    07/2023 & \emph{\href{https://github.com/MediMove/MediMoveApp}{MediMoveApp}} - a web application written in C\# that enables the management and tracking of sanitary transport services.\\
-\end{tabularx}
+\section*{Technologies}
+\begin{itemize}\itemsep0.3em
+  \item Python, C/C++
+  \item Docker, Linux, Git
+  \item Machine Learning (scikit-learn, PyTorch)
+  \item ZenML, MLflow
+  \item AWS, GCP
+  \item Java, TypeScript
+\end{itemize}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.33\textwidth}
 
-\section*{Technologies}
-\begin{tabular}{r @{\hspace{0.5em}}l}
-    \bg{skilllabelcolour}{iconcolour}{Python, C/C++} & \barrule{0.45}{0.5em}{cvpurple} \\
-    \bg{skilllabelcolour}{iconcolour}{Docker, Linux, Git} & \barrule{0.45}{0.5em}{cvpurple} \\
-    \bg{skilllabelcolour}{iconcolour}{Machine Learning} &  \barrule{0.4}{0.5em}{cvpurple}\\
-    \bg{skilllabelcolour}{iconcolour}{ZenML, MLflow} &  \barrule{0.35}{0.5em}{cvpurple}\\
-    \bg{skilllabelcolour}{iconcolour}{AWS, GCP} &  \barrule{0.35}{0.5em}{cvpurple}\\
-    \bg{skilllabelcolour}{iconcolour}{Java, Typescript} &  \barrule{0.3}{0.5em}{cvpurple}\\
-\end{tabular}
 \section*{Memberships}
 \begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.6\textwidth}}
     04/2024-Current & \href{https://satlab.agh.edu.pl}{SatLab AGH student science club} \\
     03/2024-Current & \href{https://lkn.agh.edu.pl}{Transpeed AGH student science club} \\
     02/2017-05/2017 &Volunteer at \href{https://dkms.org.uk}{DKMS}.
 \end{tabular}
-\newline
-\newline
 
 \end{minipage}
-
+\section*{Projects}
+\begin{tabularx}{\linewidth}{rX}
+    01/2024 & \textbf{\href{https://github.com/dominikciolczyk/corneal-endothelium-analEYEzer}{corneal-endothelium-analEYEzer}} - a microservice-based system using Next.js, DRF, Celery, and RabbitMQ, integrated with MinIO for image storage and a SQL database for metadata. The system allows users to upload corneal endothelium images and supports asynchronous processing and analysis of medical parameters. \\
+    07/2023 & \textbf{\href{https://github.com/MediMove/MediMoveApp}{MediMoveApp}} - a web application written in C\# that enables the management and tracking of sanitary transport services.\\
+\end{tabularx}
 \bigskip
-
 
 
 \vfill{} % Whitespace before final footer
@@ -163,19 +197,16 @@ Science fiction ~•~ Strategic games ~•~ Geopolitics ~•~ Astrophysics ~•~
 %	FINAL FOOTER
 %----------------------------------------------------------------------------------------
 \setlength{\parindent}{0pt}
-\begin{minipage}[t]{0.7\textwidth}
-\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
-{\small \icon{\faPhone}{cvgreen}{} \href{tel:+48575178743}{+48 575 178 743}
-\icon{\faAt}{cvgreen}{} \href{mailto:dominik.ciolczyk@outlook.com}{\texttt{dominik.ciolczyk@outlook.com}}
-\icon{\faLinkedin}{cvgreen}{} \href{https://www.linkedin.com/in/dominik-ciolczyk/}{Dominik Ciołczyk}
-\newline
-\icon{\faGithub}{cvgreen}{} \href{https://github.com/dominikciolczyk}{dominikciolczyk}
+\begin{minipage}[t]{0.75\textwidth}
+\fontfamily{\sfdefault}\selectfont \color{black!70}
+{I authorize the processing of personal data contained in my curriculum vitae based on art. 13 GDPR 679/16. I also consent to the processing of my personal data for the purposes of future recruitment processes.
 }
-\end{center}
+\newline
+\newline
+\newline
+
 \end{minipage}
 
-I authorize the processing of personal data contained in my curriculum vitae based on art. 13 GDPR 679/16.\\
-I also consent to the processing of my personal data for the purposes of future recruitment processes.
 \end{paracol}
 
 \end{document}
